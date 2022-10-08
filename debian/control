@@ -1,0 +1,57 @@
+Source: haskell-th-lift
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders: Clint Adams <clint@debian.org>
+Priority: optional
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends:
+ cdbs,
+ debhelper (>= 10),
+ haskell-devscripts (>= 0.13),
+ ghc (>= 8),
+ ghc-ghci,
+ ghc-prof,
+ libghc-th-abstraction-dev (>= 0.2.3),
+ libghc-th-abstraction-dev (<< 0.4),
+ libghc-th-abstraction-prof,
+ libghc-th-abstraction-doc,
+Standards-Version: 4.5.0
+Homepage: https://github.com/RyanGlScott/th-lift
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/haskell-th-lift
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/haskell-th-lift]
+X-Description: derive Template Haskell's Lift class for datatypes.
+ This library provides Template Haskell's functions to derive Lift instances, as
+ well as several instances itself.
+
+Package: libghc-th-lift-dev
+Architecture: any
+Depends: ${haskell:Depends}, ${misc:Depends}, ${shlibs:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Provides: ${haskell:Provides}
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
+
+Package: libghc-th-lift-prof
+Architecture: any
+Depends: ${haskell:Depends}, ${misc:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Provides: ${haskell:Provides}
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
+
+Package: libghc-th-lift-doc
+Architecture: all
+Section: doc
+Depends: ${haskell:Depends}, ${misc:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
